@@ -42,3 +42,5 @@ for i in range(3):
         w1 = getWeapon()
     print()
     print(weaponLst[w1] + " and " + weaponLst[w2])
+
+print("Enjoy your randomized weapons, Champion!")
