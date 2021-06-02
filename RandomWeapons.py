@@ -1,12 +1,13 @@
 import random
 
 weaponLst = ["Engraved Arming Sword", "Rokari Keenblade", "Heartsplitter", "Vestal's Wrath", "Spellsword's Charm", "Duelist's Edge", "Mistcutter", "Gemini Stranded", "Gemini Esper", "Ritual Dagger", "High Arcanist's Blade", "Knight-blooded Crest"]
+random.shuffle(weaponLst)
 usedWeapons = set()
 
 def getWeapon():
-    w = random.randint(0, len(weaponLst) - 1)
+    w = random.choice(weaponLst)
     while w in usedWeapons:
-        w = random.randint(0, len(weaponLst) - 1)
+        w = random.choice(weaponLst)
 
     usedWeapons.add(w)
     return w
@@ -14,7 +15,7 @@ def getWeapon():
 input("Hello! Press Enter to get your first 2 weapons: ")
 w1 = getWeapon()
 w2 = getWeapon()
-print(weaponLst[w1] + " and " + weaponLst[w2])
+print(w1 + " and " + w2)
 
 for i in range(3):
     reroll = ""
@@ -41,6 +42,6 @@ for i in range(3):
     elif reroll == 1:
         w1 = getWeapon()
     print()
-    print(weaponLst[w1] + " and " + weaponLst[w2])
+    print(w1 + " and " + w2)
 
 print("Enjoy your randomized weapons, Champion!")
