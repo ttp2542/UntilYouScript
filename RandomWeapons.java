@@ -25,7 +25,10 @@ public class RandomWeapons{
             "Heartsplitter", "Vestal's Wrath", "Spellsword's Charm", "Duelist's Edge", 
             "Mistcutter", "Gemini Stranded", "Gemini Esper", "Ritual Dagger", "High Arcanist's Blade", 
             "Knight-blooded Crest"};
-        String[] weaponPicLocations = new String[12];
+        String[] weaponPicLocations = new String[]{"images/Arming-Sword.png", "images/Keenblade.png", 
+            "images/Heartsplitter.png", "images/Vestalswrath.png", "images/Spellswordschart.png", "images/DuelistsEdge.png",
+            "images/Mistcutter.png", "images/GeminiStranded.png", "images/GeminiEsper.png", "images/RitualDagger.png", 
+            "images/HighArcanistsBlade.png", "images/Knightbloodedcrest.png"};
         for(int i = 0; i < weaponNames.length; i++){
             weaponLst.add(new Weapon(weaponPicLocations[i], weaponNames[i]));
         }
